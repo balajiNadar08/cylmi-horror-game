@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://df8jnscusole8"]
+
+[ext_resource type="PackedScene" uid="uid://bv1w2j1nqujyh" path="res://addons/hanging_kitchen/hanging_kitchen_cupboards.glb" id="1_uw3gl"]
+
+[node name="Sketchfab_Scene" unique_id=1715396714 instance=ExtResource("1_uw3gl")]

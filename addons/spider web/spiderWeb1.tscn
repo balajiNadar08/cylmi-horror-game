@@ -1,0 +1,53 @@
+[gd_scene format=4 uid="uid://75lhogr8lbl1"]
+
+[ext_resource type="Texture2D" uid="uid://d3xtdeawybkwl" path="res://addons/spider web/cobwebs_0.png" id="1_l5hq7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s8mrc"]
+resource_name = "cobwebs"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_l5hq7")
+roughness = 0.60533214
+emission_enabled = true
+emission = Color(0.31493032, 0.31184816, 0.31184816, 1)
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_hyakp"]
+_surfaces = [{
+"aabb": AABB(-0.7613025, -0.719641, -0.16789564, 1.3521667, 1.4809496, 0.16789564),
+"format": 34896613377,
+"index_count": 48,
+"index_data": PackedByteArray("AAABAAIAAQAAAAoAAQAKAAMAAAAEAAoACwADAAoABAALAAoACwAGAAMABQAGAAsACwAEAAwABQALAAwABAANAAwADQAFAAwABAAHAA0ADQAJAAUABwAIAA0ACAAJAA0A"),
+"lods": [0.18354568, PackedByteArray("AAABAAIAAQAAAAMAAAAEAAMABAAFAAMABQAGAAMABAAHAAUABwAIAAUACAAJAAUA")],
+"name": "cobwebs",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 14,
+"vertex_data": PackedByteArray("/UYXRGm5AABYNO0DiiMAAAAAvw26AwAAxqIAAAAnAAAhkGV8//8AAEL6NWIAAAAA2P32ARIQAABOvVK367oAAOrr//87UAAA//+FvtgjAADymjw0ALgAADDGEkAAuAAAZN/WaFTHAAB660688aMAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_co3b3"]
+resource_name = "Sketchfab_Scene_cobweb_005_cobwebs_0"
+_surfaces = [{
+"aabb": AABB(-0.7613025, -0.719641, -0.16789564, 1.3521667, 1.4809496, 0.16789564),
+"attribute_data": PackedByteArray("Hp6Qg8GZIWubg8tuWb1Kahu2EJli2IyR1tnGaTrGa6/V1WbNbtv6tE667n22x8OBtc9zk+jURLM="),
+"format": 34896613399,
+"index_count": 48,
+"index_data": PackedByteArray("AAABAAIAAQAAAAoAAQAKAAMAAAAEAAoACwADAAoABAALAAoACwAGAAMABQAGAAsACwAEAAwABQALAAwABAANAAwADQAFAAwABAAHAA0ADQAJAAUABwAIAA0ACAAJAA0A"),
+"lods": [0.18354568, PackedByteArray("AAABAAIAAQAAAAMAAAAEAAMABAAFAAMABQAGAAMABAAHAAUABwAIAAUACAAJAAUA")],
+"material": SubResource("StandardMaterial3D_s8mrc"),
+"name": "cobwebs",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 14,
+"vertex_data": PackedByteArray("/UYXRGm5z3ZYNO0DiiNNdQAAvw26A4V1xqIAAAAntXQhkGV8///cfEL6NWIAAKJo2P32ARIQ8XNOvVK367rneOrr//87UJBy//+FvtgjKWTymjw0ALiNdzDGEkAAuKZ2ZN/WaFTHSnF660688aPeb4EXjJUnH76ffCsArzUFZXbyUupWZHgsFzlJKj1JpJxhLqRjO2mIohWyA3l2nUw/P0h4WR0vkt0n")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_hyakp")
+
+[node name="cobweb_005" type="Node3D" unique_id=1401537737]
+transform = Transform3D(100, 0, 0, 0, -4.371139e-06, 100, 0, -100, -4.371139e-06, 0, 0, 0)
+
+[node name="cobweb_005_cobwebs_0" type="MeshInstance3D" parent="." unique_id=889999646]
+mesh = SubResource("ArrayMesh_co3b3")

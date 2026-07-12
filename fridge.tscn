@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b373lv70e2j7b"]
+
+[ext_resource type="PackedScene" uid="uid://depq84skburj5" path="res://addons/Fridge/old_fridge.glb" id="1_ypa8n"]
+
+[node name="Sketchfab_Scene" unique_id=983157616 instance=ExtResource("1_ypa8n")]
+
+[node name="OldFridge_fbx" parent="Sketchfab_model/SM_OldFridge_fbx/Object_2/RootNode" parent_id_path=PackedInt32Array(666269894) index="0" unique_id=2076119514]
+transform = Transform3D(6, 0, 0, 0, -2.6226832e-07, 6, 0, -6, -2.6226832e-07, 0, 0, 0)

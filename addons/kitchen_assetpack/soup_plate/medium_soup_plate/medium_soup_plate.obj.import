@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://qhh4drgfu4vl"
+path="res://.godot/imported/medium_soup_plate.obj-da8c086ca8e8e65e8df6e346cf03d4dd.mesh"
+
+[deps]
+
+files=["res://.godot/imported/medium_soup_plate.obj-da8c086ca8e8e65e8df6e346cf03d4dd.mesh"]
+
+source_file="res://addons/kitchen_assetpack/soup_plate/medium_soup_plate/medium_soup_plate.obj"
+dest_files=["res://.godot/imported/medium_soup_plate.obj-da8c086ca8e8e65e8df6e346cf03d4dd.mesh", "res://.godot/imported/medium_soup_plate.obj-da8c086ca8e8e65e8df6e346cf03d4dd.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

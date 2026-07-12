@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dk42nygc5cojx"]
+
+[ext_resource type="PackedScene" uid="uid://d3j3qxccip7jr" path="res://addons/kitchen_counter/counter_top.glb" id="1_wcxvy"]
+
+[node name="Sketchfab_Scene" unique_id=1628733674 instance=ExtResource("1_wcxvy")]

@@ -1,0 +1,189 @@
+[gd_scene format=4 uid="uid://iw30nv5rffob"]
+
+[ext_resource type="Texture2D" uid="uid://bth82s4ehst6h" path="res://addons/road/large_modular_pack_of_russian_roads_0.png" id="1_gjhew"]
+[ext_resource type="Texture2D" uid="uid://cj546w3uhwhvt" path="res://addons/road/large_modular_pack_of_russian_roads_1.png" id="2_noojo"]
+[ext_resource type="Texture2D" uid="uid://def1k57pfo0sj" path="res://addons/road/large_modular_pack_of_russian_roads_2.png" id="3_7ypq0"]
+[ext_resource type="Texture2D" uid="uid://rnfop2tt462x" path="res://addons/road/large_modular_pack_of_russian_roads_3.png" id="4_gwy1y"]
+[ext_resource type="Texture2D" uid="uid://wu1o5g1tjr0w" path="res://addons/road/large_modular_pack_of_russian_roads_4.png" id="5_w14sc"]
+[ext_resource type="Texture2D" uid="uid://3lay4tq4wxrj" path="res://addons/road/large_modular_pack_of_russian_roads_5.png" id="6_cmdrw"]
+[ext_resource type="Texture2D" uid="uid://cti3q24gfcyud" path="res://addons/road/large_modular_pack_of_russian_roads_6.png" id="7_5y0ot"]
+[ext_resource type="Texture2D" uid="uid://h7p34iq3g6j" path="res://addons/road/large_modular_pack_of_russian_roads_7.png" id="8_5esvc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hr1wa"]
+resource_name = "Road"
+cull_mode = 2
+albedo_texture = ExtResource("1_gjhew")
+roughness = 0.4
+normal_enabled = true
+normal_texture = ExtResource("2_noojo")
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_xj3jr"]
+_surfaces = [{
+"aabb": AABB(-2, -1, 0, 2, 2, 1e-05),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "Road",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAwAAAgL8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAgL8AAAAAAAAAwAAAgD8AAAAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ov7cs"]
+resource_name = "Sketchfab_Scene_Plane_Road_0"
+_surfaces = [{
+"aabb": AABB(-2, -1, 0, 2, 2, 1e-05),
+"attribute_data": PackedByteArray("AACAswAAgD8AAIA/AAAAAAAAAAAAAICzAACAPwAAgD8="),
+"format": 34359742487,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_hr1wa"),
+"name": "Road",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAwAAAgL8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAgL8AAAAAAAAAwAAAgD8AAAAA/3//f/9/////f/9//3////9//3//f////3//f/9///8=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_xj3jr")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dt2ia"]
+resource_name = "bord"
+cull_mode = 2
+albedo_texture = ExtResource("3_7ypq0")
+roughness = 0.4
+normal_enabled = true
+normal_texture = ExtResource("4_gwy1y")
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_62bdx"]
+_surfaces = [{
+"aabb": AABB(-2, -2.3, 0, 2, 4.6000004, 0.04),
+"format": 34896613377,
+"index_count": 48,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAwAEAAEAAwAFAAQABgAHAAgABgAJAAcACQAKAAcACQALAAoADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkA"),
+"name": "bord",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 28,
+"vertex_data": PackedByteArray("AACmtwAAAAD//6a3//8AAP//prcAAAAAAACmt///AAD//1G5//8AAAAAUbn//wAA//9YSAAAAAAAAFhI//8AAAAAWEgAAAAA//9YSP//AAAAAK1G//8AAP//rUb//wAAAACa3v//AAD//0bg//8AAP//mt7//wAAAABG4P//AAD//9Ug//8AAAAAKh///wAAAADVIP//AAD//yof//8AAAAAU/7//wAA////////AAD//1P+//8AAAAA/////wAA//+rAf//AAAAAAAA//8AAAAAqwH//wAA//8AAP//AAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_8rl13"]
+resource_name = "Sketchfab_Scene_Plane_bord_0"
+_surfaces = [{
+"aabb": AABB(-2, -2.3, 0, 2, 4.6000004, 0.04),
+"attribute_data": PackedByteArray("XAB7gPz/ksT8/3uAXACSxJX9yv7IAvy7yALK/pX9/LtcAJLE//////z/ksRfAP7/lf38u8YCr4HIAvy7k/2vgToUjYBm7+z/ZO+NgD0U7P9m7+z/OhSNgD0U7P9k742AOhSNgGbv7P9k742APRTs/2bv7P86FI2APRTs/2TvjYA="),
+"format": 34896613399,
+"index_count": 48,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0A"),
+"material": SubResource("StandardMaterial3D_dt2ia"),
+"name": "bord",
+"primitive": 3,
+"uv_scale": Vector4(6.6342535, 1.992487, 0, 0),
+"vertex_count": 32,
+"vertex_data": PackedByteArray("AACmtwAA/7///6a3////v///prcAAP+/AACmt////7///1hIAAD/vwAAWEj///+/AABYSAAA/7///1hI////vwAAprf//wCA//9Ruf//AID//6a3//8AgAAAUbn//wCA//9YSP//AIAAAK1G//8AgAAAWEj//wCA//+tRv//AIAAAJre//8AgP//RuD//wCA//+a3v//AIAAAEbg//8AgP//1SD//wCAAAAqH///AIAAANUg//8AgP//Kh///wCAAABT/v//AID///////8AgP//U/7//wCAAAD/////AID//6sB//8AgAAAAAD//wCAAACrAf//AID//wAA//8AgAAA/38AAP9/AAD/fwAA/3////9/////f////3////9//3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_62bdx")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5m2i0"]
+resource_name = "grass"
+cull_mode = 2
+albedo_texture = ExtResource("5_w14sc")
+roughness = 0.0
+normal_enabled = true
+normal_texture = ExtResource("6_cmdrw")
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_mvsh7"]
+_surfaces = [{
+"aabb": AABB(-2, -1.71, 0.04, 2, 3.4099998, 1e-05),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUA"),
+"name": "grass",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AACyzQAAAAD/////AAAAAP//ss0AAAAAAAD//wAAAAD//wwzAAAAAAAAAAAAAAAAAAAMMwAAAAD//wAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_eykms"]
+resource_name = "Sketchfab_Scene_Plane_grass_0"
+_surfaces = [{
+"aabb": AABB(-2, -1.71, 0.04, 2, 3.4099998, 1e-05),
+"attribute_data": PackedByteArray("/3///////3//f/9///////9///////9//3//f/////8="),
+"format": 34896613399,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUA"),
+"material": SubResource("StandardMaterial3D_5m2i0"),
+"name": "grass",
+"primitive": 3,
+"uv_scale": Vector4(2, 4, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AACyzQAA/7//////AAD/v///ss0AAP+/AAD//wAA/7///wwzAAD/vwAAAAAAAP+/AAAMMwAA/7///wAAAAD/v///////////////////////f/9//3//f/9//3//f/9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_mvsh7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3yacf"]
+resource_name = "material"
+cull_mode = 2
+albedo_texture = ExtResource("7_5y0ot")
+roughness = 0.4
+normal_enabled = true
+normal_texture = ExtResource("8_5esvc")
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_v28k3"]
+_surfaces = [{
+"aabb": AABB(-2, -2.27, 0.04, 2, 4.54, 1e-05),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUA"),
+"name": "material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("///iHQAAAAAAAAAAAAAAAAAA4h0AAAAA//8AAAAAAAAAAIzhAAAAAP////8AAAAA//+M4QAAAAAAAP//AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_gbgml"]
+resource_name = "Sketchfab_Scene_Plane_��������������_0"
+_surfaces = [{
+"aabb": AABB(-2, -2.27, 0.04, 2, 4.54, 1e-05),
+"attribute_data": PackedByteArray("AAD/f/+f////n/9/AAD//wAA/3//n////5//fwAA//8="),
+"format": 34896613399,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUA"),
+"material": SubResource("StandardMaterial3D_3yacf"),
+"name": "material",
+"primitive": 3,
+"uv_scale": Vector4(8, 2, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("///iHQAA//8AAAAAAAD//wAA4h0AAP////8AAAAA//8AAIzhAAAAgP////8AAACA//+M4QAAAIAAAP//AAAAgP9//3//f/9//3//f/9//3//f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_v28k3")
+
+[node name="Plane" type="Node3D" unique_id=168905963]
+transform = Transform3D(100, 0, 0, 0, -1.6292068e-05, 100, 0, -100, -1.6292068e-05, 0, 0, 0)
+
+[node name="Plane_Road_0" type="MeshInstance3D" parent="." unique_id=2006384838]
+mesh = SubResource("ArrayMesh_ov7cs")
+
+[node name="Plane_bord_0" type="MeshInstance3D" parent="." unique_id=1618313668]
+mesh = SubResource("ArrayMesh_8rl13")
+
+[node name="Plane_grass_0" type="MeshInstance3D" parent="." unique_id=1756510980]
+mesh = SubResource("ArrayMesh_eykms")
+
+[node name="Plane_��������������_0" type="MeshInstance3D" parent="." unique_id=1084612828]
+mesh = SubResource("ArrayMesh_gbgml")
