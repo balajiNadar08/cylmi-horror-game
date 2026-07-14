@@ -56,6 +56,7 @@
 [ext_resource type="Script" uid="uid://bvd58u57fwwhv" path="res://ui.gd" id="53_ntx8l"]
 [ext_resource type="PackedScene" uid="uid://wpfiufdsep8x" path="res://addons/fence/wrought_iron_fence.glb" id="53_rm4vd"]
 [ext_resource type="Texture2D" uid="uid://ckc7qeoewi8h4" path="res://addons/grass texture/Grass004_2K-JPG_Color.jpg" id="54_pjyto"]
+[ext_resource type="Script" uid="uid://mopkvpkvk4wp" path="res://panel.gd" id="55_cyx1q"]
 [ext_resource type="Texture2D" uid="uid://be8yjnlulxtue" path="res://entities/delivery man.png" id="55_rqtf5"]
 [ext_resource type="Texture2D" uid="uid://c50ulnylfwwu1" path="res://addons/grass texture/Grass004_2K-JPG_NormalGL.jpg" id="55_sm6fg"]
 [ext_resource type="Texture2D" uid="uid://c2l7tyucabdc6" path="res://addons/grass texture/Grass004_2K-JPG_Roughness.jpg" id="56_b17eg"]
@@ -277,7 +278,6 @@ light_size = 1.0
 [node name="OmniLight3D7" type="OmniLight3D" parent="light" unique_id=455905749]
 transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, -20.578777, 20.168772, 19.179754)
 light_color = Color(0.98649865, 0.841114, 0.5450667, 1)
-light_energy = 1.96
 light_size = 1.0
 shadow_enabled = true
 
@@ -378,13 +378,10 @@ transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, -11.
 [node name="TubeLight" type="OmniLight3D" parent="wall_lamp4" unique_id=1056729356]
 transform = Transform3D(-0.8660253, 0, 0.5000001, 0, 1, 0, -0.5000001, 0, -0.8660253, 0.085329056, 0.04144478, -0.022611618)
 light_color = Color(1, 0.8235294, 0.5686275, 1)
-light_energy = 4.765
 light_volumetric_fog_energy = 0.0
-light_size = 0.155
 shadow_enabled = true
 shadow_blur = 1.5
-omni_range = 8.5
-omni_attenuation = 0.9
+omni_range = 2.34
 
 [node name="wall_lamp3" parent="." unique_id=911235556 instance=ExtResource("17_d13ii")]
 transform = Transform3D(-1, 0, -1.9629454e-07, 0, 1, 0, 1.509958e-07, 0, -1.3, -5.664, 21.3, 15.821)
@@ -533,6 +530,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("55_cyx1q")
 
 [node name="TextureRect" type="TextureRect" parent="UI/Panel" unique_id=1718013206]
 layout_mode = 1
@@ -764,7 +762,7 @@ light_indirect_energy = 1.05
 light_specular = 1.5
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="." unique_id=1503596020]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.16119099, 18.144073, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15076113, 18.144073, 1.7053995)
 light_energy = 9.772
 light_specular = 1.5
 
@@ -774,7 +772,7 @@ light_energy = 9.772
 light_specular = 1.5
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=1014347715]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.157278, 18.144073, -4.3547773)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.328207, 18.144073, -4.3547773)
 light_energy = 9.772
 light_specular = 1.5
 
@@ -789,13 +787,25 @@ light_energy = 9.772
 light_specular = 1.5
 
 [node name="OmniLight3D7" type="OmniLight3D" parent="." unique_id=1562237069]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.259595, 22.144075, -7.2547774)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.259595, 23.660463, -7.2547774)
 light_energy = 9.772
 light_specular = 1.5
 omni_range = 8.400001
 
 [node name="OmniLight3D9" type="OmniLight3D" parent="." unique_id=104443547]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.440405, 20.644075, -7.2547774)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.440405, 21.582226, -7.2547774)
+light_energy = 9.772
+light_specular = 1.5
+omni_range = 8.400001
+
+[node name="OmniLight3D12" type="OmniLight3D" parent="." unique_id=1839779875]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.082592, 18.632303, -7.2547774)
+light_energy = 9.772
+light_specular = 1.5
+omni_range = 8.400001
+
+[node name="OmniLight3D13" type="OmniLight3D" parent="." unique_id=1282400482]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.743983, 18.632303, -7.2547774)
 light_energy = 9.772
 light_specular = 1.5
 omni_range = 8.400001
