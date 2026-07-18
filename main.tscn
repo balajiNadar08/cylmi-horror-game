@@ -545,19 +545,21 @@ stretch_mode = 6
 
 [node name="Option2" type="Button" parent="UI/Panel" unique_id=962180016]
 layout_mode = 0
-offset_left = 808.0
-offset_top = 290.0
-offset_right = 976.0
-offset_bottom = 387.0
+offset_left = 675.0
+offset_top = 418.0
+offset_right = 843.0
+offset_bottom = 515.0
 text = "wevwe"
+autowrap_mode = 3
 
 [node name="Option1" type="Button" parent="UI/Panel" unique_id=1476726170]
 layout_mode = 0
-offset_left = 593.0
-offset_top = 289.0
-offset_right = 761.0
-offset_bottom = 386.0
+offset_left = 695.0
+offset_top = 266.0
+offset_right = 863.0
+offset_bottom = 363.0
 text = "wveev"
+autowrap_mode = 3
 
 [node name="QuestionLabel" type="Label" parent="UI/Panel" unique_id=1347593052]
 layout_mode = 0
@@ -566,6 +568,9 @@ offset_top = 163.0
 offset_right = 971.0
 offset_bottom = 233.0
 text = "dvwvr"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=2067369051]
 size = Vector2i(1584, 994)
