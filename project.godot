@@ -22,7 +22,9 @@ window/stretch/aspect="expand"
 
 [file_customization]
 
-folder_colors={}
+folder_colors={
+"res://audio/": "yellow"
+}
 
 [input]
 
