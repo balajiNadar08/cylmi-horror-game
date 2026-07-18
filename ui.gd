@@ -6,8 +6,7 @@ extends CanvasLayer
 
 var current_question = 0
 
-# Typewriter settings
-var typing_speed := 0.03
+var typing_speed: float = 0.05
 var typing := false
 
 var dialogue = {
@@ -24,109 +23,69 @@ var dialogue = {
 		"option1": "Fine, I'll take the package.",
 		"option2": "I don't remember ordering anything.",
 		"next1": 3,
-		"next2": 4
+		"next2": 2
 	},
 
 	2: {
-		"question": "The label has this address sir. Maybe someone else wants to surprise you!",
+		"question": "The label has this address, sir. Maybe someone else wants to surprise you!",
 		"option1": "Nope, that can't be. I don't have any such friends.",
 		"option2": "Just leave the box outside and go.",
-		"next1": 5,
-		"next2": 6
+		"next1": 4,
+		"next2": 5
 	},
 
 	3: {
-		"question": "The man slowly reaches into his pocket and shows an ID card.",
-		"option1": "Take the ID.",
-		"option2": "Keep the door shut.",
+		"question": "//You open the door and the delivery man kills you.//",
+		"option1": "",
+		"option2": "",
+		"next1": -1,
+		"next2": -1
+	},
+
+	4: {
+		"question": "No friends who'd send a gift? Ouch. Well, somebody paid for this delivery, and it's got your name and address clear as day. Maybe your friend who left a few hours ago wants to surprise you, who knows. Anyways, just open the door and take the package, man. I have to go home too.",
+		"option1": "Fine, I'll take the package.",
+		"option2": "Wait... How the hell do you know that my friend left a few hours ago?",
+		"next1": 3,
+		"next2": 6
+	},
+
+	5: {
+		"question": "I'm afraid I can't. Company policy. I need the recipient's signature. Please understand, your friend wants to meet you.",
+		"option1": "Fine, I'll take the package.",
+		"option2": "Wait... What did you just say? My friend wants to meet me? Who are you?",
+		"next1": 3,
+		"next2": 6
+	},
+
+	6: {
+		"question": "Relax, relax! You just asked me, 'How the hell do you know that my friend left a few hours ago?' I'm only repeating your own words back to you. Or... did I already know that before you said it? Funny how that works. Anyway, it's cold out here. The cardboard's starting to soak through. You gonna take it or not?",
+		"option1": "Fine, just give me the package and go away.",
+		"option2": "No... I never told you I had a friend here tonight. You knew before I said it. Who are you?",
 		"next1": 7,
 		"next2": 8
 	},
 
-	4: {
-		"question": "The label has this address sir. Maybe someone else wants to surprise you!",
-		"option1": "Nope, that can't be. I don't have any such friends.",
-		"option2": "Just leave the box outside and go.",
-		"next1": 9,
-		"next2": 10
-	},
-
-	5: {
-		"question": "He goes completely silent for several seconds.",
-		"option1": "Open the door.",
-		"option2": "Call the police.",
-		"next1": 11,
-		"next2": 12
-	},
-
-	6: {
-		"question": "He smiles... then says your full name.",
-		"option1": "Open the door.",
-		"option2": "Stay silent.",
-		"next1": 13,
-		"next2": 14
-	},
-
 	7: {
-		"question": "The ID looks real... but the photo isn't his.",
-		"option1": "Open the door.",
-		"option2": "Refuse.",
+		"question": "//You open the door and the delivery man kills you.//",
+		"option1": "",
+		"option2": "",
 		"next1": -1,
 		"next2": -1
 	},
 
 	8: {
-		"question": "The knocking suddenly becomes louder.",
-		"option1": "End Conversation",
-		"option2": "End Conversation",
-		"next1": -1,
-		"next2": -1
+		"question": "Are you drunk? Just open the door and take your package. Aren't you curious to see what's inside... or should I just open it and show you?",
+		"option1": "No. Open it if you want, but do it out there. I'm not opening this door.",
+		"option2": "Just go away. I'm calling the cops right now.",
+		"next1": 9,
+		"next2": 9
 	},
 
 	9: {
-		"question": "(chuckles) No friends who'd send a gift? Ouch. Well, somebody paid for this delivery, and it's got your name and address clear as day. Maybe your friend who left few hours ago wants to surprise you, who knows. Anyways, just open the door and take the package man, I have to go home too.",
-		"option1": "Fine, I'll take the package.",
-		"option2": "Wait.....How the hell do you know that my friend left few hours ago?",
-		"next1": -1,
-		"next2": -1
-	},
-
-	10: {
-		"question": "The hallway is empty... but someone knocks again.",
-		"option1": "End",
-		"option2": "End",
-		"next1": -1,
-		"next2": -1
-	},
-
-	11: {
-		"question": "As you unlock the door... everything goes black.",
-		"option1": "Restart",
-		"option2": "Restart",
-		"next1": -1,
-		"next2": -1
-	},
-
-	12: {
-		"question": "The police answer... but nobody is outside anymore.",
-		"option1": "End",
-		"option2": "End",
-		"next1": -1,
-		"next2": -1
-	},
-
-	13: {
-		"question": "The man smiles wider than any human should.",
-		"option1": "End",
-		"option2": "End",
-		"next1": -1,
-		"next2": -1
-	},
-
-	14: {
-		"question": "After a minute, the footsteps slowly fade away.",
-		"option1": "End",
-		"option2": "End",
+		"question": "Fine... I'll just open the box here...\n\n//(Sound of tape being removed)//\n\nHere. Take a look. I brought your friend back.\n\n//You see the decapitated head of your friend. Hell breaks loose.//",
+		"option1": "",
+		"option2": "",
 		"next1": -1,
 		"next2": -1
 	}
@@ -145,7 +104,6 @@ func show_dialog():
 
 
 func load_question():
-
 	typing = true
 
 	var q = dialogue[current_question]
@@ -162,14 +120,13 @@ func load_question():
 	option1.text = q["option1"]
 	option2.text = q["option2"]
 
-	option1.visible = true
-	option2.visible = true
+	option1.visible = q["option1"] != ""
+	option2.visible = q["option2"] != ""
 
 	typing = false
 
 
 func _on_option_1_pressed():
-
 	if typing:
 		return
 
@@ -183,7 +140,6 @@ func _on_option_1_pressed():
 
 
 func _on_option_2_pressed():
-
 	if typing:
 		return
 
@@ -197,7 +153,5 @@ func _on_option_2_pressed():
 
 
 func hide_dialog():
-
 	visible = false
-
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
