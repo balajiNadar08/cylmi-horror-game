@@ -3,6 +3,7 @@ extends CanvasLayer
 @onready var question = $Panel/QuestionLabel
 @onready var option1 = $Panel/Option1
 @onready var option2 = $Panel/Option2
+@onready var bg_music = $AudioStreamPlayer2D
 
 var current_question = 0
 
@@ -91,7 +92,6 @@ var dialogue = {
 	}
 }
 
-
 func _ready():
 	visible = false
 
@@ -105,7 +105,7 @@ func show_dialog():
 
 func load_question():
 	typing = true
-
+	bg_music.play()
 	var q = dialogue[current_question]
 
 	option1.visible = false
@@ -124,6 +124,7 @@ func load_question():
 	option2.visible = q["option2"] != ""
 
 	typing = false
+	bg_music.stop()
 
 
 func _on_option_1_pressed():
