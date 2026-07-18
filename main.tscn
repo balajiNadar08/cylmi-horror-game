@@ -60,6 +60,7 @@
 [ext_resource type="Texture2D" uid="uid://be8yjnlulxtue" path="res://entities/delivery man.png" id="55_rqtf5"]
 [ext_resource type="Texture2D" uid="uid://c50ulnylfwwu1" path="res://addons/grass texture/Grass004_2K-JPG_NormalGL.jpg" id="55_sm6fg"]
 [ext_resource type="Texture2D" uid="uid://c2l7tyucabdc6" path="res://addons/grass texture/Grass004_2K-JPG_Roughness.jpg" id="56_b17eg"]
+[ext_resource type="FontFile" uid="uid://bdprx0ox0ykq" path="res://fonts/SpecialElite-Regular.ttf" id="57_0dhbp"]
 [ext_resource type="PackedScene" uid="uid://yoyrmo8ejjah" path="res://addons/concrete path/floor_concrete.glb" id="57_ntx8l"]
 [ext_resource type="PackedScene" uid="uid://iw30nv5rffob" path="res://addons/road/road.tscn" id="58_uatky"]
 [ext_resource type="PackedScene" uid="uid://chmunwdeimlhe" path="res://addons/road/road2.tscn" id="59_rqtf5"]
@@ -549,16 +550,20 @@ offset_left = 675.0
 offset_top = 418.0
 offset_right = 843.0
 offset_bottom = 515.0
-text = "wevwe"
+theme_override_fonts/font = ExtResource("57_0dhbp")
+theme_override_font_sizes/font_size = 18
+text = "OPTION 2"
 autowrap_mode = 3
 
 [node name="Option1" type="Button" parent="UI/Panel" unique_id=1476726170]
 layout_mode = 0
-offset_left = 695.0
-offset_top = 266.0
-offset_right = 863.0
-offset_bottom = 363.0
-text = "wveev"
+offset_left = 674.0
+offset_top = 282.0
+offset_right = 842.0
+offset_bottom = 379.0
+theme_override_fonts/font = ExtResource("57_0dhbp")
+theme_override_font_sizes/font_size = 18
+text = "OPTION 1"
 autowrap_mode = 3
 
 [node name="QuestionLabel" type="Label" parent="UI/Panel" unique_id=1347593052]
@@ -567,7 +572,9 @@ offset_left = 608.0
 offset_top = 163.0
 offset_right = 971.0
 offset_bottom = 233.0
-text = "dvwvr"
+theme_override_fonts/font = ExtResource("57_0dhbp")
+theme_override_font_sizes/font_size = 20
+text = "QUESTION"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
