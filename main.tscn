@@ -57,8 +57,8 @@
 [ext_resource type="PackedScene" uid="uid://wpfiufdsep8x" path="res://addons/fence/wrought_iron_fence.glb" id="53_rm4vd"]
 [ext_resource type="Texture2D" uid="uid://ckc7qeoewi8h4" path="res://addons/grass texture/Grass004_2K-JPG_Color.jpg" id="54_pjyto"]
 [ext_resource type="Script" uid="uid://mopkvpkvk4wp" path="res://panel.gd" id="55_cyx1q"]
-[ext_resource type="Texture2D" uid="uid://be8yjnlulxtue" path="res://entities/delivery man.png" id="55_rqtf5"]
 [ext_resource type="Texture2D" uid="uid://c50ulnylfwwu1" path="res://addons/grass texture/Grass004_2K-JPG_NormalGL.jpg" id="55_sm6fg"]
+[ext_resource type="Texture2D" uid="uid://csju0ko6mv8c3" path="res://mommy.png" id="56_0dhbp"]
 [ext_resource type="Texture2D" uid="uid://c2l7tyucabdc6" path="res://addons/grass texture/Grass004_2K-JPG_Roughness.jpg" id="56_b17eg"]
 [ext_resource type="FontFile" uid="uid://bdprx0ox0ykq" path="res://fonts/SpecialElite-Regular.ttf" id="57_0dhbp"]
 [ext_resource type="PackedScene" uid="uid://yoyrmo8ejjah" path="res://addons/concrete path/floor_concrete.glb" id="57_ntx8l"]
@@ -540,7 +540,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("55_rqtf5")
+texture = ExtResource("56_0dhbp")
 expand_mode = 2
 stretch_mode = 6
 
@@ -548,8 +548,8 @@ stretch_mode = 6
 layout_mode = 0
 offset_left = 675.0
 offset_top = 418.0
-offset_right = 843.0
-offset_bottom = 515.0
+offset_right = 798.0
+offset_bottom = 462.0
 theme_override_fonts/font = ExtResource("57_0dhbp")
 theme_override_font_sizes/font_size = 18
 text = "OPTION 2"
@@ -559,8 +559,8 @@ autowrap_mode = 3
 layout_mode = 0
 offset_left = 674.0
 offset_top = 282.0
-offset_right = 842.0
-offset_bottom = 379.0
+offset_right = 792.0
+offset_bottom = 333.0
 theme_override_fonts/font = ExtResource("57_0dhbp")
 theme_override_font_sizes/font_size = 18
 text = "OPTION 1"
