@@ -57,8 +57,9 @@
 [ext_resource type="PackedScene" uid="uid://wpfiufdsep8x" path="res://addons/fence/wrought_iron_fence.glb" id="53_rm4vd"]
 [ext_resource type="Texture2D" uid="uid://ckc7qeoewi8h4" path="res://addons/grass texture/Grass004_2K-JPG_Color.jpg" id="54_pjyto"]
 [ext_resource type="Script" uid="uid://mopkvpkvk4wp" path="res://panel.gd" id="55_cyx1q"]
+[ext_resource type="AudioStream" uid="uid://dpnhumxwsss2q" path="res://audio/typing_sound.ogg" id="55_jx0wj"]
 [ext_resource type="Texture2D" uid="uid://c50ulnylfwwu1" path="res://addons/grass texture/Grass004_2K-JPG_NormalGL.jpg" id="55_sm6fg"]
-[ext_resource type="Texture2D" uid="uid://csju0ko6mv8c3" path="res://mommy.png" id="56_0dhbp"]
+[ext_resource type="Texture2D" uid="uid://be8yjnlulxtue" path="res://entities/delivery man.png" id="56_0dhbp"]
 [ext_resource type="Texture2D" uid="uid://c2l7tyucabdc6" path="res://addons/grass texture/Grass004_2K-JPG_Roughness.jpg" id="56_b17eg"]
 [ext_resource type="FontFile" uid="uid://bdprx0ox0ykq" path="res://fonts/SpecialElite-Regular.ttf" id="57_0dhbp"]
 [ext_resource type="PackedScene" uid="uid://yoyrmo8ejjah" path="res://addons/concrete path/floor_concrete.glb" id="57_ntx8l"]
@@ -524,6 +525,9 @@ transform = Transform3D(1.12, 0, 0, 0, 1.0000002, 0, 0, 0, 1, -10.000122, 0, 0)
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1955187955]
 script = ExtResource("53_ntx8l")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="UI" unique_id=1092897996]
+stream = ExtResource("55_jx0wj")
 
 [node name="Panel" type="Panel" parent="UI" unique_id=1213704891]
 anchors_preset = 15
