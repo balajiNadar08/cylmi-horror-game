@@ -59,7 +59,7 @@
 [ext_resource type="Script" uid="uid://mopkvpkvk4wp" path="res://panel.gd" id="55_cyx1q"]
 [ext_resource type="AudioStream" uid="uid://dpnhumxwsss2q" path="res://audio/typing_sound.ogg" id="55_jx0wj"]
 [ext_resource type="Texture2D" uid="uid://c50ulnylfwwu1" path="res://addons/grass texture/Grass004_2K-JPG_NormalGL.jpg" id="55_sm6fg"]
-[ext_resource type="Texture2D" uid="uid://be8yjnlulxtue" path="res://entities/delivery man.png" id="56_0dhbp"]
+[ext_resource type="Texture2D" uid="uid://be8yjnlulxtue" path="res://portraits/deliveryman.png" id="56_0dhbp"]
 [ext_resource type="Texture2D" uid="uid://c2l7tyucabdc6" path="res://addons/grass texture/Grass004_2K-JPG_Roughness.jpg" id="56_b17eg"]
 [ext_resource type="FontFile" uid="uid://bdprx0ox0ykq" path="res://fonts/SpecialElite-Regular.ttf" id="57_0dhbp"]
 [ext_resource type="PackedScene" uid="uid://yoyrmo8ejjah" path="res://addons/concrete path/floor_concrete.glb" id="57_ntx8l"]
@@ -72,6 +72,7 @@
 [ext_resource type="PackedScene" uid="uid://bc47xwlbatnqt" path="res://addons/street light/rusty_streetlight.glb" id="64_b17eg"]
 [ext_resource type="PackedScene" uid="uid://b3xw3fs14tk75" path="res://addons/shelf/shelf.glb" id="68_wu3dr"]
 [ext_resource type="PackedScene" uid="uid://be0asp7upg3e4" path="res://addons/radio/old_radio_player.glb" id="69_cyx1q"]
+[ext_resource type="Script" uid="uid://bmqgammf28y8h" path="res://GameManager.gd" id="73_kkkcx"]
 
 [sub_resource type="Environment" id="Environment_gyisu"]
 background_mode = 1
@@ -537,7 +538,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("55_cyx1q")
 
-[node name="TextureRect" type="TextureRect" parent="UI/Panel" unique_id=1718013206]
+[node name="Portrait" type="TextureRect" parent="UI/Panel" unique_id=1718013206]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -852,6 +853,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.300001, 19.101295, 19.7)
 
 [node name="Sketchfab_Scene32" parent="." unique_id=1744175406 instance=ExtResource("69_cyx1q")]
 transform = Transform3D(-1, 0, 7.152558e-08, 0, 1.1, 0, -5.9604645e-08, 0, -1.2, -12, 19.525, 18.100002)
+
+[node name="GameManager" type="Node" parent="." unique_id=2136273674]
+script = ExtResource("73_kkkcx")
 
 [connection signal="pressed" from="UI/Panel/Option2" to="UI" method="_on_option_2_pressed"]
 [connection signal="pressed" from="UI/Panel/Option1" to="UI" method="_on_option_1_pressed"]
