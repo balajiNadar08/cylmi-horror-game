@@ -1,116 +1,76 @@
 extends CanvasLayer
 
+@onready var portrait = $Panel/Portrait
 @onready var question = $Panel/QuestionLabel
 @onready var option1 = $Panel/Option1
 @onready var option2 = $Panel/Option2
 @onready var bg_music = $AudioStreamPlayer2D
 
-var current_question = 0
+var dialogue = {}
+var current_question: int = 0
 
-var typing_speed: float = 0.05
+var typing_speed := 0.05
 var typing := false
 
-var dialogue = {
-	0: {
-		"question": "Package delivery. Could you open the door for a moment?",
-		"option1": "Who the hell delivers packages at midnight?",
-		"option2": "I don't remember ordering anything.",
-		"next1": 1,
-		"next2": 2
-	},
-
-	1: {
-		"question": "I know it's late. I'm just finishing my route. I'd appreciate it if you could open the door and take this package.",
-		"option1": "Fine, I'll take the package.",
-		"option2": "I don't remember ordering anything.",
-		"next1": 3,
-		"next2": 2
-	},
-
-	2: {
-		"question": "The label has this address, sir. Maybe someone else wants to surprise you!",
-		"option1": "Nope, that can't be. I don't have any such friends.",
-		"option2": "Just leave the box outside and go.",
-		"next1": 4,
-		"next2": 5
-	},
-
-	3: {
-		"question": "//You open the door and the delivery man kills you.//",
-		"option1": "",
-		"option2": "",
-		"next1": -1,
-		"next2": -1
-	},
-
-	4: {
-		"question": "No friends who'd send a gift? Ouch. Well, somebody paid for this delivery, and it's got your name and address clear as day. Maybe your friend who left a few hours ago wants to surprise you, who knows. Anyways, just open the door and take the package, man. I have to go home too.",
-		"option1": "Fine, I'll take the package.",
-		"option2": "Wait... How the hell do you know that my friend left a few hours ago?",
-		"next1": 3,
-		"next2": 6
-	},
-
-	5: {
-		"question": "I'm afraid I can't. Company policy. I need the recipient's signature. Please understand, your friend wants to meet you.",
-		"option1": "Fine, I'll take the package.",
-		"option2": "Wait... What did you just say? My friend wants to meet me? Who are you?",
-		"next1": 3,
-		"next2": 6
-	},
-
-	6: {
-		"question": "Relax, relax! You just asked me, 'How the hell do you know that my friend left a few hours ago?' I'm only repeating your own words back to you. Or... did I already know that before you said it? Funny how that works. Anyway, it's cold out here. The cardboard's starting to soak through. You gonna take it or not?",
-		"option1": "Fine, just give me the package and go away.",
-		"option2": "No... I never told you I had a friend here tonight. You knew before I said it. Who are you?",
-		"next1": 7,
-		"next2": 8
-	},
-
-	7: {
-		"question": "//You open the door and the delivery man kills you.//",
-		"option1": "",
-		"option2": "",
-		"next1": -1,
-		"next2": -1
-	},
-
-	8: {
-		"question": "Are you drunk? Just open the door and take your package. Aren't you curious to see what's inside... or should I just open it and show you?",
-		"option1": "No. Open it if you want, but do it out there. I'm not opening this door.",
-		"option2": "Just go away. I'm calling the cops right now.",
-		"next1": 9,
-		"next2": 9
-	},
-
-	9: {
-		"question": "Fine... I'll just open the box here...\n\n//(Sound of tape being removed)//\n\nHere. Take a look. I brought your friend back.\n\n//You see the decapitated head of your friend. Hell breaks loose.//",
-		"option1": "",
-		"option2": "",
-		"next1": -1,
-		"next2": -1
-	}
-}
 
 func _ready():
 	visible = false
 
+func load_character(character_name: String):
+	print("Loading:", character_name)
 
-func show_dialog():
+	var portrait_path = "res://portraits/%s.png" % character_name
+	var dialogue_path = "res://dialogues/%s.json" % character_name
+
+	print(portrait_path)
+	print(dialogue_path)
+
+	portrait.texture = load(portrait_path)
+
+	var file = FileAccess.open(dialogue_path, FileAccess.READ)
+
+	if file == null:
+		push_error("Couldn't open " + dialogue_path)
+		return
+
+	var json = JSON.new()
+
+	if json.parse(file.get_as_text()) != OK:
+		push_error("Invalid JSON")
+		return
+
+	dialogue = json.data
+
+	print(dialogue)
+
+func show_dialog(character_name: String):
+	load_character(character_name)
+
 	visible = true
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
 	current_question = 0
 	await load_question()
 
 
 func load_question():
+	print(dialogue)
+	print(current_question)
+	print(dialogue.keys())
 	typing = true
 	bg_music.play()
-	var q = dialogue[current_question]
+
+	var key = str(int(current_question))
+
+	if !dialogue.has(key):
+		push_error("Question " + key + " not found.")
+		hide_dialog()
+		return
+
+	var q = dialogue[key]
 
 	option1.visible = false
 	option2.visible = false
-
 	question.text = ""
 
 	for letter in q["question"]:
@@ -131,7 +91,8 @@ func _on_option_1_pressed():
 	if typing:
 		return
 
-	var next = dialogue[current_question]["next1"]
+	var q = dialogue[str(int(current_question))]
+	var next = int(q["next1"])
 
 	if next == -1:
 		hide_dialog()
@@ -144,7 +105,8 @@ func _on_option_2_pressed():
 	if typing:
 		return
 
-	var next = dialogue[current_question]["next2"]
+	var q = dialogue[str(int(current_question))]
+	var next = int(q["next2"])
 
 	if next == -1:
 		hide_dialog()
@@ -156,3 +118,6 @@ func _on_option_2_pressed():
 func hide_dialog():
 	visible = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+	var game = get_tree().current_scene.get_node("GameManager")
+	game.next_character()
