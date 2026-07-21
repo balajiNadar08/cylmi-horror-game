@@ -1,0 +1,57 @@
+{
+  "0": {
+	"question": "I felt it the moment I stepped into this building. May I come in?",
+	"option1": "Who are you?",
+	"option2": "What r u talking bout?!",
+	"next1": 1,
+	"next2": 2
+  },
+
+  "1": {
+	"question": "That is not important right now. U need to be alert and guard urself.",
+	"option1": "What do you mean, followed?",
+	"option2": "You're scaring me. Stop.",
+	"next1": 3,
+	"next2": 4
+  },
+
+  "2": {
+	"question": "There is something coming. Please, just listen! Something followed you home. I felt it grow stronger tonight.",
+	"option1": "What do you mean, followed?",
+	"option2": "You're scaring me. Stop.",
+	"next1": 3,
+	"next2": 4
+  },
+
+  "3": {
+	"question": "A presence, old and hungry, has marked this home. Lock every door. Do not open after now—definitely not for a familiar voice.",
+	"option1": "Why? What happens then?",
+	"option2": "I'll be careful. Thanks.",
+	"next1": 5,
+	"next2": 6
+  },
+
+  "4": {
+	"question": "I wish I could stop it. But it grows stronger after dark. Lock every door. Do not open after now—definitely not for a familiar voice.",
+	"option1": "Why? What happens then?",
+	"option2": "I'll be careful. Thanks.",
+	"next1": 5,
+	"next2": 6
+  },
+
+  "5": {
+	"question": "It wears familiar faces. It will sound like someone you know, someone you trust... I am just here to help you out. Heed my warning and you'll be safe.",
+	"option1": "Okay fine!",
+	"option2": "Go away, stranger, or I'll call the police! It's pretty late to prank someone.",
+	"next1": -1,
+	"next2": -1
+  },
+
+  "6": {
+	"question": "(Shaman walks away into the darkness.) The apartment feels colder now. Some unknown presence is felt...",
+	"option1": "Continue",
+	"option2": "End",
+	"next1": -1,
+	"next2": -1
+  }
+}
