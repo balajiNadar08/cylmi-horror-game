@@ -23,7 +23,9 @@ window/stretch/aspect="expand"
 [file_customization]
 
 folder_colors={
-"res://audio/": "yellow"
+"res://audio/": "yellow",
+"res://dialogues/": "teal",
+"res://portraits/": "red"
 }
 
 [input]
