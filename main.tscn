@@ -73,6 +73,8 @@
 [ext_resource type="PackedScene" uid="uid://b3xw3fs14tk75" path="res://addons/shelf/shelf.glb" id="68_wu3dr"]
 [ext_resource type="PackedScene" uid="uid://be0asp7upg3e4" path="res://addons/radio/old_radio_player.glb" id="69_cyx1q"]
 [ext_resource type="Script" uid="uid://bmqgammf28y8h" path="res://GameManager.gd" id="73_kkkcx"]
+[ext_resource type="PackedScene" uid="uid://b4inbp4njb5vr" path="res://addons/hospital bed/hospital_bed.glb" id="74_34ol3"]
+[ext_resource type="PackedScene" uid="uid://debi2ifiilkyn" path="res://addons/hospital trolley/hospital_trolley.glb" id="75_c2n8d"]
 
 [sub_resource type="Environment" id="Environment_gyisu"]
 background_mode = 1
@@ -173,7 +175,7 @@ size = Vector3(8.086304, 2.32135, 5.1734924)
 material = SubResource("StandardMaterial3D_6jia0")
 
 [node name="ProtoController" parent="." unique_id=366074567 instance=ExtResource("1_ig7tw")]
-transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, -20.800001, 19, 19.1)
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 13.904301, 15.453804, 22.246696)
 
 [node name="Walls" type="CSGCombiner3D" parent="." unique_id=1696347246]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.0999985, 2.6999998, -16.90001)
@@ -592,6 +594,7 @@ transform = Transform3D(0.9875873, 0.012133769, -0.1566021, 0, 0.9970118, 0.0772
 
 [node name="Ground" type="CSGBox3D" parent="." unique_id=646956247]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14.069255, 0.006357193)
+use_collision = true
 size = Vector3(100, 1, 100)
 
 [node name="Pillars" type="CSGCombiner3D" parent="." unique_id=1337399221]
@@ -845,6 +848,18 @@ light_energy = 9.772
 light_specular = 1.5
 omni_range = 8.5
 
+[node name="OmniLight3D14" type="OmniLight3D" parent="." unique_id=51274768]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.113991, 18.35859, 18.129738)
+light_energy = 9.772
+light_specular = 1.5
+omni_range = 8.5
+
+[node name="OmniLight3D15" type="OmniLight3D" parent="." unique_id=321227299]
+transform = Transform3D(1, 0, 8.458147e-05, 0, 1, 0, -8.458147e-05, 0, 1, 14.310949, 18.183273, 24.991085)
+light_energy = 9.772
+light_specular = 1.5
+omni_range = 8.5
+
 [node name="Sketchfab_Scene28" parent="." unique_id=1873222288 instance=ExtResource("68_wu3dr")]
 transform = Transform3D(-4.371139e-08, 0, 1.11, 0, 1, 0, -1, 0, -4.851964e-08, -12.125, 19.101, 17.95)
 
@@ -856,6 +871,44 @@ transform = Transform3D(-1, 0, 7.152558e-08, 0, 1.1, 0, -5.9604645e-08, 0, -1.2,
 
 [node name="GameManager" type="Node" parent="." unique_id=2136273674]
 script = ExtResource("73_kkkcx")
+
+[node name="hospital" type="CSGCombiner3D" parent="." unique_id=720110746]
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="hospital" unique_id=1890065328]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.157789, 17.048767, 14.8527565)
+size = Vector3(12, 5, 0.5)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="hospital" unique_id=1027352905]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.157789, 17.048767, 30.148209)
+size = Vector3(12, 5, 0.5)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="hospital" unique_id=1388269516]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.224563, 17.051176, 22.607635)
+size = Vector3(16.005737, 5, 0.5)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="hospital" unique_id=2048950962]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 19.949352, 17.051176, 22.606949)
+size = Vector3(16.004364, 5, 0.5)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="hospital" unique_id=672156388]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.078318, 19.47747, 22.534737)
+size = Vector3(12.213806, 1, 15.913734)
+
+[node name="Sketchfab_Scene39" parent="." unique_id=580740699 instance=ExtResource("74_34ol3")]
+transform = Transform3D(0.49486214, 0, -1.6263798, 0, 1.7, 0, 1.6263798, 0, 0.49486214, 14.212637, 15.079045, 17.16672)
+
+[node name="Sketchfab_Scene41" parent="." unique_id=1446563812 instance=ExtResource("74_34ol3")]
+transform = Transform3D(0.49486214, 0, -1.6263798, 0, 1.7, 0, 1.6263798, 0, 0.49486214, 17.795511, 15.079045, 17.16672)
+
+[node name="Sketchfab_Scene40" parent="." unique_id=1373526572 instance=ExtResource("74_34ol3")]
+transform = Transform3D(0.49486214, 0, -1.6263798, 0, 1.7, 0, 1.6263798, 0, 0.49486214, 10.512078, 15.079045, 17.16672)
+
+[node name="Sketchfab_Scene42" parent="." unique_id=1814361052 instance=ExtResource("75_c2n8d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.309955, 14.569867, 15.862679)
+
+[node name="Sketchfab_Scene43" parent="." unique_id=1872008823 instance=ExtResource("75_c2n8d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.849305, 14.569867, 15.862679)
 
 [connection signal="pressed" from="UI/Panel/Option2" to="UI" method="_on_option_2_pressed"]
 [connection signal="pressed" from="UI/Panel/Option1" to="UI" method="_on_option_1_pressed"]
