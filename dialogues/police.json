@@ -1,0 +1,105 @@
+{
+  "0": {
+	"question": "Police Department. We received a call from this apartment.",
+	"option1": "I never called.",
+	"option2": "Finally! Come in.",
+	"next1": 1,
+	"next2": 2
+  },
+
+  "1": {
+	"question": "That's strange. The call came from this address. May I come inside?",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 3,
+	"next2": 3
+  },
+
+  "2": {
+	"question": "I'm here to make sure everything is alright. May I come in?",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 3,
+	"next2": 3
+  },
+
+  "3": {
+	"question": "Did anyone visit you earlier tonight?",
+	"option1": "A strange man warned me.",
+	"option2": "No. Nobody.",
+	"next1": 4,
+	"next2": 5
+  },
+
+  "4": {
+	"question": "A strange man... Interesting.",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 6,
+	"next2": 6
+  },
+
+  "5": {
+	"question": "No one at all? Think carefully, boy...",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 6,
+	"next2": 6
+  },
+
+  "6": {
+	"question": "Did he tell you not to open the door tonight?",
+	"option1": "Yes... how do you know?",
+	"option2": "What? Who told you that?",
+	"next1": 7,
+	"next2": 8
+  },
+
+  "7": {
+	"question": "Because... he always says the same thing.",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 9,
+	"next2": 9
+  },
+
+  "8": {
+	"question": "Hahaha, can I come in, dear?",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 9,
+	"next2": 9
+  },
+
+  "9": {
+	"question": "Tell me... did you really call the police?",
+	"option1": "Wait... NO. I never did.",
+	"option2": "I don't remember.",
+	"next1": 10,
+	"next2": 10
+  },
+
+  "10": {
+	"question": "No... you're very lame, boy. (The officer smiles.)",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 11,
+	"next2": 11
+  },
+
+  "11": {
+	"question": "So why don't you open the door? (The officer's smile stretches just a little too wide as he tries to break in.)",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 12,
+	"next2": 12
+  },
+
+  "12": {
+	"question": "You shouldn't trust every familiar face.",
+	"option1": "Continue",
+	"option2": "End",
+	"next1": -1,
+	"next2": -1
+  }
+}
