@@ -53,14 +53,30 @@ func show_dialog(character_name: String):
 	await load_question()
 
 
+func hide_dialog():
+	print("HIDE DIALOG CALLED")
+
+	visible = false
+
+	print("UI visible: ", visible)
+
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+	var game = get_tree().current_scene.get_node("GameManager")
+
+	print("Moving to next character")
+
+	game.next_character()
+	
+
 func load_question():
 	print(dialogue)
 	print(current_question)
-	print(dialogue.keys())
+
 	typing = true
 	bg_music.play()
 
-	var key = str(int(current_question))
+	var key = str(current_question)
 
 	if !dialogue.has(key):
 		push_error("Question " + key + " not found.")
@@ -73,19 +89,29 @@ func load_question():
 	option2.visible = false
 	question.text = ""
 
+	# Typewriter effect
 	for letter in q["question"]:
 		question.text += letter
 		await get_tree().create_timer(typing_speed).timeout
 
-	option1.text = q["option1"]
-	option2.text = q["option2"]
-
-	option1.visible = q["option1"] != ""
-	option2.visible = q["option2"] != ""
-
 	typing = false
 	bg_music.stop()
 
+	option1.text = q["option1"]
+	option2.text = q["option2"]
+
+	# Show buttons if they have text
+	option1.visible = q["option1"] != ""
+	option2.visible = q["option2"] != ""
+
+	# Dialogue ending with no options
+	if q["option1"] == "" and q["option2"] == "":
+		print("Dialogue finished")
+
+		await get_tree().create_timer(3.0).timeout
+
+		hide_dialog()
+		
 
 func _on_option_1_pressed():
 	if typing:
@@ -115,9 +141,5 @@ func _on_option_2_pressed():
 		await load_question()
 
 
-func hide_dialog():
-	visible = false
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-
-	var game = get_tree().current_scene.get_node("GameManager")
-	game.next_character()
+func is_dialog_open() -> bool:
+	return visible
