@@ -1,0 +1,97 @@
+{
+  "0": {
+	"question": "Mommy: Sweetheart, it's Mommy. Open the door, it's cold out here.",
+	"option1": "Mom? Is that really you?",
+	"option2": "You can't be my mom.",
+	"next1": 1,
+	"next2": 2
+  },
+
+  "1": {
+	"question": "Of course it's me, baby. I've missed you so much.",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 3,
+	"next2": 3
+  },
+
+  "2": {
+	"question": "Why would you say that? I'm right here.",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 3,
+	"next2": 3
+  },
+
+  "3": {
+	"question": "Don't you remember my voice? I used to sing you to sleep every night.",
+	"option1": "I remember... but something feels wrong.",
+	"option2": "Please, just go away.",
+	"next1": 4,
+	"next2": 5
+  },
+
+  "4": {
+	"question": "Wrong? There's nothing wrong, sweetheart. Just open the door.",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 6,
+	"next2": 6
+  },
+
+  "5": {
+	"question": "Don't be silly. Let Mommy in.",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 6,
+	"next2": 6
+  },
+
+  "6": {
+	"question": "I made your favorite dinner. Come give your mother a hug.",
+	"option1": "Wait... how are you here?",
+	"option2": "I'll open the door.",
+	"next1": 7,
+	"next2": 8
+  },
+
+  "7": {
+	"question": "What do you mean, honey? I'm always here for you.",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 9,
+	"next2": 9
+  },
+
+  "8": {
+	"question": "(Your hand hovers over the lock. Something feels off.)",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 9,
+	"next2": 9
+  },
+
+  "9": {
+	"question": "...Mom died three years ago. I was at your funeral.",
+	"option1": "This isn't possible.",
+	"option2": "You're not my mother.",
+	"next1": 10,
+	"next2": 10
+  },
+
+  "10": {
+	"question": "The voice on the other side goes silent for a moment... then it laughs — low, wrong, multiplied, like several voices overlapping. \"Very good, sweetheart. You almost forgot.\"",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 11,
+	"next2": 11
+  },
+
+  "11": {
+	"question": "The door shudders as something slams against it from outside. Nails drag down the wood. Your mother's voice screams, laughs, and sobs — all at once. \"Let. Me. In.\"",
+	"option1": "Continue",
+	"option2": "End",
+	"next1": -1,
+	"next2": -1
+  }
+}
