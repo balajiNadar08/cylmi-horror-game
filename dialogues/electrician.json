@@ -1,0 +1,129 @@
+{
+  "0": {
+	"question": "Evening. Got a call about a short circuit on this floor.",
+	"option1": "We didn't report anything.",
+	"option2": "Oh, okay, come in.",
+	"next1": 1,
+	"next2": 2
+  },
+
+  "1": {
+	"question": "That's what the work order says. Can I confirm the unit?",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 3,
+	"next2": 3
+  },
+
+  "2": {
+	"question": "Appreciate it. Won't take more than a few minutes.",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 3,
+	"next2": 3
+  },
+
+  "3": {
+	"question": "Mind if I ask — anyone else live here with you?",
+	"option1": "Why does that matter?",
+	"option2": "No, just me.",
+	"next1": 4,
+	"next2": 5
+  },
+
+  "4": {
+	"question": "Just routine. Some jobs need two signatures.",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 6,
+	"next2": 6
+  },
+
+  "5": {
+	"question": "(A pause, just slightly too long, before he replies.) Good. Simpler that way.",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 6,
+	"next2": 6
+  },
+
+  "6": {
+	"question": "Your building's fuse box is in the basement, correct?",
+	"option1": "I don't actually know.",
+	"option2": "Yeah, think so.",
+	"next1": 7,
+	"next2": 8
+  },
+
+  "7": {
+	"question": "You'd be surprised how many people don't know that.",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 9,
+	"next2": 9
+  },
+
+  "8": {
+	"question": "(He's already writing something down — your answer, maybe.)",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 9,
+	"next2": 9
+  },
+
+  "9": {
+	"question": "I'll need your apartment number for the report.",
+	"option1": "I'd rather not give that.",
+	"option2": "It's right here, obviously.",
+	"next1": 10,
+	"next2": 11
+  },
+
+  "10": {
+	"question": "(A long silence. Then, quietly—) I already have it. Just being polite.",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 12,
+	"next2": 12
+  },
+
+  "11": {
+	"question": "(He smiles, checking something off a list with names on it.)",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 12,
+	"next2": 12
+  },
+
+  "12": {
+	"question": "One last thing — open the door so I can verify the meter.",
+	"option1": "No. I'll call the building manager myself.",
+	"option2": "Sure, hang on.",
+	"next1": 13,
+	"next2": 14
+  },
+
+  "13": {
+	"question": "(Through the peephole, his badge photo doesn't match his face anymore.)",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 15,
+	"next2": 15
+  },
+
+  "14": {
+	"question": "(The toolbox outside is gone. It was never there to begin with.)",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 15,
+	"next2": 15
+  },
+
+  "15": {
+	"question": "A faint hum lingers in the hallway long after the footsteps fade.",
+	"option1": "Continue",
+	"option2": "End",
+	"next1": -1,
+	"next2": -1
+  }
+}
