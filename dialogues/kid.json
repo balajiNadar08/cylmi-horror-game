@@ -1,0 +1,105 @@
+{
+  "0": {
+	"question": "I'm cold. Can I come inside for a little while?",
+	"option1": "Where's your parents?",
+	"option2": "It's too late for you to be out.",
+	"next1": 1,
+	"next2": 2
+  },
+
+  "1": {
+	"question": "I am lost! Help me.",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 3,
+	"next2": 3
+  },
+
+  "2": {
+	"question": "I know. I like the quiet though. It's nice.",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 3,
+	"next2": 3
+  },
+
+  "3": {
+	"question": "I counted your steps earlier. Fourteen, right?",
+	"option1": "How would you know that?",
+	"option2": "That's... not okay to say.",
+	"next1": 4,
+	"next2": 5
+  },
+
+  "4": {
+	"question": "I count everyone's steps. It helps me remember them.",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 6,
+	"next2": 6
+  },
+
+  "5": {
+	"question": "(A small giggle, pitched wrong, like two voices at once.)",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 6,
+	"next2": 6
+  },
+
+  "6": {
+	"question": "Can you open the door now? I'm tired of counting.",
+	"option1": "No. Go home.",
+	"option2": "Just for a second.",
+	"next1": 7,
+	"next2": 8
+  },
+
+  "7": {
+	"question": "(The knock stops. Then, softer — from inside the room.)",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 9,
+	"next2": 9
+  },
+
+  "8": {
+	"question": "(Small fingers slide under the door, too many of them.)",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 9,
+	"next2": 9
+  },
+
+  "9": {
+	"question": "I'm not lost. I never said I was lost.",
+	"option1": "Go away kid! I am warning you.",
+	"option2": "What did you say?",
+	"next1": 10,
+	"next2": 11
+  },
+
+  "10": {
+	"question": "(No answer. Just breathing, right against the peephole.)",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 12,
+	"next2": 12
+  },
+
+  "11": {
+	"question": "You did. Just now. In your head. I heard it.",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 12,
+	"next2": 12
+  },
+
+  "12": {
+	"question": "The hallway light above the door goes out — just that one. Somewhere close, something is still counting.",
+	"option1": "Continue",
+	"option2": "End",
+	"next1": -1,
+	"next2": -1
+  }
+}
