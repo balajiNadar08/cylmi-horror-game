@@ -1,0 +1,105 @@
+{
+  "0": {
+	"question": "You let so many faces through tonight. Did you notice?",
+	"option1": "What ARE you?",
+	"option2": "Stay back! I'm warning you!",
+	"next1": 1,
+	"next2": 2
+  },
+
+  "1": {
+	"question": "A shaman. An officer. An electrician. A lost little kid.",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 3,
+	"next2": 3
+  },
+
+  "2": {
+	"question": "I don't need your warning. I already know how this ends.",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 3,
+	"next2": 3
+  },
+
+  "3": {
+	"question": "I wear the faces you trust the most. That's the whole trick.",
+	"option1": "Then who are you really?",
+	"option2": "This isn't real. It can't be.",
+	"next1": 4,
+	"next2": 5
+  },
+
+  "4": {
+	"question": "(Creepy loud laugh)",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 6,
+	"next2": 6
+  },
+
+  "5": {
+	"question": "Oh, it's very real. Ask your reflection if you don't believe me.",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 6,
+	"next2": 6
+  },
+
+  "6": {
+	"question": "One face is left. The one you trust most of all.",
+	"option1": "Whose face is that?",
+	"option2": "Don't. Please, don't.",
+	"next1": 7,
+	"next2": 8
+  },
+
+  "7": {
+	"question": "(The voice shifts — and it is suddenly, unmistakably, yours.)",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 9,
+	"next2": 9
+  },
+
+  "8": {
+	"question": "(It doesn't need permission anymore. It already has your voice.)",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 9,
+	"next2": 9
+  },
+
+  "9": {
+	"question": "I've been here since the shaman knocked. You're the mimic.",
+	"option1": "That's not possible. I'm real.",
+	"option2": "No. NO. This isn't—",
+	"next1": 10,
+	"next2": 11
+  },
+
+  "10": {
+	"question": "(It steps aside. The real you is still standing in the hallway, locked out.)",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 12,
+	"next2": 12
+  },
+
+  "11": {
+	"question": "(disturbing) It's alright. No one will notice. They never do, in the end.",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 12,
+	"next2": 12
+  },
+
+  "12": {
+	"question": "The door closes gently from the inside. Outside, in the cold hallway, someone who looks exactly like you starts knocking.",
+	"option1": "Continue",
+	"option2": "End",
+	"next1": -1,
+	"next2": -1
+  }
+}
