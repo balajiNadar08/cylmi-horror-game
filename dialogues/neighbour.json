@@ -1,0 +1,81 @@
+{
+  "0": {
+	"question": "Neighbour: Oh sweetheart, I saw your light on. Are you alright in there?",
+	"option1": "I'm fine. Just leave me alone.",
+	"option2": "Finally, someone normal. Please, come in.",
+	"next1": 1,
+	"next2": 2
+  },
+
+  "1": {
+	"question": "I just worry about you, dear. All this commotion tonight...",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 3,
+	"next2": 3
+  },
+
+  "2": {
+	"question": "Oh, thank goodness. I brought you some tea, to help you rest.",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 3,
+	"next2": 3
+  },
+
+  "3": {
+	"question": "You've had quite the night, haven't you? The knocking, the voices...",
+	"option1": "How do you know about that?",
+	"option2": "I don't want to talk about it.",
+	"next1": 4,
+	"next2": 5
+  },
+
+  "4": {
+	"question": "Everyone on this floor knows, dear. It happens every night.",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 6,
+	"next2": 6
+  },
+
+  "5": {
+	"question": "That's alright. You don't have to explain anything to me.",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 6,
+	"next2": 6
+  },
+
+  "6": {
+	"question": "You look exhausted. Let me help you — just open the door.",
+	"option1": "...Fine. I don't care anymore.",
+	"option2": "No more. I just want this to end.",
+	"next1": 7,
+	"next2": 7
+  },
+
+  "7": {
+	"question": "(Drained, you finally unlatch the door. Her smile doesn't quite reach her eyes.)",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 8,
+	"next2": 8
+  },
+
+  "8": {
+	"question": "There, there. This will only hurt for a second. (She grabs your arm before you can pull away, a needle already sliding in.)",
+	"option1": "Continue",
+	"option2": "Continue",
+	"next1": 9,
+	"next2": 9
+  },
+
+  "9": {
+	"question": "Your eyes snap open. Fluorescent lights. A hospital ceiling. Beeping monitors. A nurse leans over you: \"He's finally waking up. It's been three days.\"",
+	"option1": "Continue",
+	"option2": "End",
+	"next1": -1,
+	"next2": -1
+  }
+}
