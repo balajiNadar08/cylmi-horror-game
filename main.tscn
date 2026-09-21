@@ -76,12 +76,15 @@
 [ext_resource type="Script" uid="uid://bmqgammf28y8h" path="res://GameManager.gd" id="73_kkkcx"]
 [ext_resource type="PackedScene" uid="uid://b4inbp4njb5vr" path="res://addons/hospital bed/hospital_bed.glb" id="74_34ol3"]
 [ext_resource type="PackedScene" uid="uid://debi2ifiilkyn" path="res://addons/hospital trolley/hospital_trolley.glb" id="75_c2n8d"]
+[ext_resource type="AudioStream" uid="uid://bn5rwirf4563k" path="res://audio/doorknock.mp3" id="75_ovcoh"]
 [ext_resource type="PackedScene" uid="uid://beghi162toy18" path="res://addons/blood bag/blood_bag.glb" id="76_gx4rg"]
 [ext_resource type="PackedScene" uid="uid://b83yg082kmqyv" path="res://addons/hospital curtain/hospital_curtain.glb" id="77_5dllo"]
 [ext_resource type="PackedScene" uid="uid://ck5y3hciyo6ws" path="res://addons/hospital wheelchair/wheelchair.glb" id="78_birbe"]
 [ext_resource type="PackedScene" uid="uid://c3wxfvrsc6tr" path="res://addons/hospital cupboard/hospital_cupboard.glb" id="79_f1p13"]
 [ext_resource type="PackedScene" uid="uid://baacfplmue2pg" path="res://addons/teddy/johnnyislas-gonzalez_bear_sketchfab.glb" id="80_4obbf"]
 [ext_resource type="PackedScene" uid="uid://6hkv5yik2aox" path="res://addons/dead body/dead_body.glb" id="82_ovcoh"]
+[ext_resource type="AudioStream" uid="uid://hftnaq8qgg3s" path="res://audio/rain.mp3" id="84_1yv1y"]
+[ext_resource type="Script" uid="uid://dgi0jq748ceyn" path="res://rainsound.gd" id="85_5yh34"]
 
 [sub_resource type="Environment" id="Environment_gyisu"]
 background_mode = 1
@@ -183,6 +186,24 @@ uv1_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ug0i7"]
 albedo_color = Color(1, 0.105882354, 1, 1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_6jia0"]
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+direction = Vector3(0, -1, 0)
+spread = 5.0
+initial_velocity_min = 10.0
+initial_velocity_max = 20.0
+gravity = Vector3(0, -20, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7j0gi"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 1, 1, 0.0627451)
+
+[sub_resource type="QuadMesh" id="QuadMesh_7as5j"]
+material = SubResource("StandardMaterial3D_7j0gi")
+size = Vector2(0.005, 0.4)
 
 [node name="Main" type="Node3D" unique_id=1262687855]
 
@@ -994,6 +1015,9 @@ transform = Transform3D(-1, 0, 7.152558e-08, 0, 1.1, 0, -5.9604645e-08, 0, -1.2,
 [node name="GameManager" type="Node" parent="." unique_id=2136273674]
 script = ExtResource("73_kkkcx")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="GameManager" unique_id=598090742]
+stream = ExtResource("75_ovcoh")
+
 [node name="hospital" type="CSGCombiner3D" parent="." unique_id=720110746]
 use_collision = true
 
@@ -1095,6 +1119,21 @@ transform = Transform3D(-0.0032223593, 0, -0.002369895, 0, 0.0040000007, 0, 0.00
 
 [node name="Sketchfab_Scene92" parent="." unique_id=1213020184 instance=ExtResource("82_ovcoh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.80946, 15.181921, 17.161844)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=74816551]
+transform = Transform3D(22.354094, 0, 0, 0, 2.7983098, 0, 0, 0, 13.152363, 2.1250038, 18.80049, -1.1704178)
+amount = 2000
+lifetime = 2.0
+preprocess = 2.0
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_6jia0")
+draw_pass_1 = SubResource("QuadMesh_7as5j")
+
+[node name="rainsound" type="AudioStreamPlayer3D" parent="." unique_id=1994048959]
+stream = ExtResource("84_1yv1y")
+volume_db = 10.0
+autoplay = true
+script = ExtResource("85_5yh34")
 
 [connection signal="pressed" from="UI/Panel/Option2" to="UI" method="_on_option_2_pressed"]
 [connection signal="pressed" from="UI/Panel/Option1" to="UI" method="_on_option_1_pressed"]
